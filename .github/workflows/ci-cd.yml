@@ -36,12 +36,12 @@ jobs:
       - name: Checkout manifests repository
         uses: actions/checkout@v3
         with:
-          repository: R4FFA775/hello-manifests
+          repository: R4FFA775/hello-manifests # <--- CORREÇÃO AQUI
           token: ${{ secrets.PAT }}
 
       - name: Update Kubernetes manifest
         run: |
-          sed -i 's|image: .*|image: ${{ secrets.DOOKER_USERNAME }}/hello-app:${{ github.sha }}|' deployment.yaml
+          sed -i 's|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/hello-app:${{ github.sha }}|' deployment.yaml # <--- CORREÇÃO AQUI
 
       - name: Commit and push changes
         run: |
