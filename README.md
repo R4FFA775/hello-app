@@ -73,7 +73,11 @@ No repositório `hello-app`, crie os seguintes arquivos:
     COPY requirements.txt .
     RUN pip install --no-cache-dir -r requirements.txt
     COPY . .
+<<<<<<< HEAD
     CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+=======
+    CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8.000"]
+>>>>>>> 6cd16a4f3137bb7f289b34a97d8445644ecc58b7
     ```
 
 ### Etapa 3: Configuração dos Manifestos Kubernetes
@@ -82,7 +86,11 @@ No repositório `hello-manifests`, crie os seguintes arquivos:
 
 * **`deployment.yaml`**:
     ```yaml
+<<<<<<< HEAD
     apiVersion: apps/v1
+=======
+    apiVersion: v1
+>>>>>>> 6cd16a4f3137bb7f289b34a97d8445644ecc58b7
     kind: Deployment
     metadata:
       name: hello-app
@@ -176,4 +184,8 @@ Aqui estão as capturas de tela que comprovam o sucesso da pipeline de CI/CD.
 
 ## ✒️ Autores
 
+<<<<<<< HEAD
 * **Rafael de Lima** - *Desenvolvimento e implementação do projeto*
+=======
+* **Rafael de Lima** - *Desenvolvimento e implementação do projeto*
+>>>>>>> 6cd16a4f3137bb7f289b34a97d8445644ecc58b7
